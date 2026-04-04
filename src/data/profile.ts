@@ -45,6 +45,9 @@ export const projects = [
 
 export const publications = [
   {
+    title: "Assessing the Role of Information Technology in Promoting Sustainable and Renewable Energy in Helambu Rural Municipality, Nepal",
+    journal: "NPRC Journal of Multidisciplinary Research",
+    description: "Explored how IT solutions can accelerate renewable energy adoption in rural Nepal, analyzing energy access gaps and proposing technology-driven frameworks for sustainable energy management in underserved communities.",
     doi: "https://doi.org/10.3126/nprcjmr.v2i14.88023",
   },
 ];
