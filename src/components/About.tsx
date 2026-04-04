@@ -8,8 +8,8 @@ const About = () => (
       <p className="text-muted-foreground leading-relaxed">{profile.bio}</p>
 
       <div className="flex flex-wrap items-center gap-4 pt-2">
-        <span className="inline-flex items-center gap-2 text-sm text-green-400">
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+        <span className="inline-flex items-center gap-2 text-sm" style={{ color: 'hsl(142, 71%, 55%)' }}>
+          <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: 'hsl(142, 71%, 55%)' }} />
           Open to opportunities
         </span>
         <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
