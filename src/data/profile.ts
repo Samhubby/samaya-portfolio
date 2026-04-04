@@ -15,8 +15,9 @@ export const profile = {
 export const skills = {
   "Backend & Frameworks": ["PHP", "Laravel", "MySQL", "RabbitMQ"],
   "DevOps & Cloud": ["Docker", "Jenkins", "Portainer", "Basic Kubernetes", "AWS"],
+  "Agentic & AI-Driven Tools": ["Claude Code", "Cursor", "Lovable", "AI-Assisted Workflows"],
   "Tools & Platforms": ["Git", "GitLab", "Postman"],
-  "Soft Skills": ["Fluent Communication", "Collaboration & Teamwork", "Analytical Thinking", "Critical Thinking", "Attention to Detail"],
+  "Soft Skills": ["Agentic Mindset", "Fluent Communication", "Collaboration & Teamwork", "Analytical Thinking", "Attention to Detail"],
 };
 
 export const experience = [
