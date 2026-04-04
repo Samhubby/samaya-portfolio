@@ -98,4 +98,4 @@ export const extracurriculars = [
   },
 ];
 
-export const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+export const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkoppgdb";
