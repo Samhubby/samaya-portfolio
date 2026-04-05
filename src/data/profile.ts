@@ -56,10 +56,12 @@ export const blogs = [
   {
     title: "Monitoring Applications with Laravel Telescope",
     description: "Explained the usage of Laravel Telescope for debugging, monitoring requests, jobs, and improving development visibility.",
+    url: "https://laravelnepal.com/post/monitoring-with-laravel-telescope"
   },
   {
     title: "Laravel Fluent Class",
     description: "Wrote a blog explaining usage of Laravel Fluent for cleaner configuration handling and improved development workflow.",
+    url: "https://laravelnepal.com/post/laravel-fluent-class"
   },
 ];
 
