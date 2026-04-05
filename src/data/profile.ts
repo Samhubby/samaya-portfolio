@@ -6,8 +6,8 @@ export const profile = {
   phone: "+977 9811361137",
   location: "Pepsicola, Kathmandu",
   website: "www.samayamahate.com.np",
-  linkedin: "https://linkedin.com/in/Samaya",
-  github: "https://github.com/Samaya",
+  linkedin: "https://www.linkedin.com/in/samaya-mahate-a07653239/",
+  github: "https://github.com/Samhubby",
   bio: "I am an Associate Backend Developer and BSIT student with hands-on experience building BPM dashboards and customer portals using Laravel. Experienced in integrating external APIs with RabbitMQ and working with CI/CD pipelines using Jenkins and containerized deployments. AWS Certified Solutions Architect Associate with strong interest in backend systems, cloud technologies, and scalable web applications.",
   cvPath: "/CV_Samaya_Mahate.pdf",
 };
