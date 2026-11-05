@@ -38,8 +38,7 @@ class BankingCaseDispatcher
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline & Value Statement */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-[var(--accent)] mb-4">
-              <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse"></span>
+            <div className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-[var(--accent)] mb-4">
               Associate Backend Developer &bull; Kathmandu, Nepal
             </div>
 
