@@ -1,33 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Portfolio - Samaya</title>
-    <meta name="description" content="Personal portfolio of Samaya Mahate" />
+    <title>Samaya Mahate — Associate Backend Developer & Cloud Practitioner</title>
+    <meta name="description" content="Personal portfolio and systems showcase of Samaya Mahate, Associate Backend Developer specializing in Laravel, RabbitMQ, and AWS." />
     <meta name="author" content="Samaya Mahate" />
+
+    <!-- Synchronous theme restore to eliminate FOUC -->
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Google Fonts: Fraunces (Editorial Display) & Inter (Interface) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/sm-logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/sm-logo.svg" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://samayamahate.com.np/" />
-    <meta property="og:title" content="Portfolio - Samaya" />
-    <meta property="og:description" content="Personal portfolio of Samaya Mahate" />
+    <meta property="og:title" content="Samaya Mahate — Associate Backend Developer" />
+    <meta property="og:description" content="Building scalable backend systems with Laravel, AWS, and modern DevOps practices." />
     <meta property="og:image" content="https://samayamahate.com.np/sm-logo.svg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://samayamahate.com.np/" />
-    <meta property="twitter:title" content="Portfolio - Samaya" />
-    <meta property="twitter:description" content="Personal portfolio of Samaya Mahate" />
+    <meta property="twitter:title" content="Samaya Mahate — Associate Backend Developer" />
+    <meta property="twitter:description" content="Building scalable backend systems with Laravel, AWS, and modern DevOps practices." />
     <meta property="twitter:image" content="https://samayamahate.com.np/sm-logo.svg" />
-    <meta name="twitter:site" content="@Lovable" />
-
-    <script type="module" crossorigin src="/assets/index-HIXJYtyz.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CKntaNjY.css">
+    <script type="module" crossorigin src="/assets/index-XSxEfjQy.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CpMo19U0.css">
   </head>
 
   <body>
