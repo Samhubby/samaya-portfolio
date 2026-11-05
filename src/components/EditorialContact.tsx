@@ -15,6 +15,29 @@ const EditorialContact: React.FC = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    // Anti-spam honeypot: silently drop automated bots without consuming quotas
+    if (data.get("_gotcha")) {
+      setSubmitted(true);
+      setSubmitting(false);
+      return;
+    }
+
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const message = String(data.get("message") || "").trim();
+
+    if (!name || !email || !message) {
+      setError("Please fill out all required fields.");
+      setSubmitting(false);
+      return;
+    }
+
+    if (name.length > 100 || email.length > 120 || message.length > 2000) {
+      setError("Input exceeds allowable length limits.");
+      setSubmitting(false);
+      return;
+    }
+
     try {
       const res = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
@@ -149,6 +172,16 @@ const EditorialContact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Anti-spam honeypot (invisible to real users, catches bots) */}
+                  <input
+                    type="text"
+                    name="_gotcha"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden="true"
+                  />
+
                   {error && (
                     <div className="p-3 rounded-md bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-[13px] flex items-center gap-2">
                       <AlertCircle size={16} />
@@ -165,6 +198,7 @@ const EditorialContact: React.FC = () => {
                         type="text"
                         name="name"
                         required
+                        maxLength={100}
                         placeholder="Your Name"
                         className="w-full px-3.5 py-2.5 rounded-md border border-[var(--line)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-[14px] placeholder:text-[var(--text-muted)]/50 focus:border-[var(--accent)] transition-colors outline-none"
                       />
@@ -177,6 +211,7 @@ const EditorialContact: React.FC = () => {
                         type="email"
                         name="email"
                         required
+                        maxLength={120}
                         placeholder="Your Email"
                         className="w-full px-3.5 py-2.5 rounded-md border border-[var(--line)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-[14px] placeholder:text-[var(--text-muted)]/50 focus:border-[var(--accent)] transition-colors outline-none"
                       />
@@ -191,6 +226,7 @@ const EditorialContact: React.FC = () => {
                       name="message"
                       rows={4}
                       required
+                      maxLength={2000}
                       placeholder="Message..."
                       className="w-full px-3.5 py-2.5 rounded-md border border-[var(--line)] bg-[var(--bg-surface)] text-[var(--text-primary)] text-[14px] placeholder:text-[var(--text-muted)]/50 focus:border-[var(--accent)] transition-colors outline-none resize-none"
                     />
