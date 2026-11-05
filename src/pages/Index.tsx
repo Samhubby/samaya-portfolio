@@ -1,35 +1,35 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
-import Publications from "@/components/Publications";
-import Blog from "@/components/Blog";
-import Certifications from "@/components/Certifications";
-import Community from "@/components/Community";
-import Education from "@/components/Education";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import React from "react";
+import { ThemeProvider } from "@/hooks/use-theme";
+import EditorialNavbar from "@/components/EditorialNavbar";
+import EditorialHero from "@/components/EditorialHero";
+import MetricsBand from "@/components/MetricsBand";
+import AboutSection from "@/components/AboutSection";
+import EditorialExperience from "@/components/EditorialExperience";
+import FeaturedSystems from "@/components/FeaturedSystems";
+import ResearchAndWriting from "@/components/ResearchAndWriting";
+import CredentialsSection from "@/components/CredentialsSection";
+import EditorialContact from "@/components/EditorialContact";
+import EditorialFooter from "@/components/EditorialFooter";
 
-const Index = () => (
-  <>
-    <Navbar />
-    <main>
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Publications />
-      <Blog />
-      <Certifications />
-      <Community />
-      <Education />
-      <Contact />
-    </main>
-    <Footer />
-  </>
-);
+const Index: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-200">
+        <EditorialNavbar />
+        <main>
+          <EditorialHero />
+          <MetricsBand />
+          <AboutSection />
+          <EditorialExperience />
+          <FeaturedSystems />
+          <ResearchAndWriting />
+          <CredentialsSection />
+          <EditorialContact />
+        </main>
+        <EditorialFooter />
+      </div>
+    </ThemeProvider>
+  );
+};
 
 export default Index;
