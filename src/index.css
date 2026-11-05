@@ -1,91 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 220 13% 10%;
-    --foreground: 210 20% 90%;
+  :root,
+  [data-theme="dark"] {
+    --bg-primary: #17211F;
+    --bg-surface: #1E2B28;
+    --line: rgba(226, 223, 214, 0.15);
+    --accent: #85C0AB;
+    --accent-soft: rgba(133, 192, 171, 0.15);
+    --text-primary: #FBFAF7;
+    --text-muted: #B2BCB8;
+    --gold: #C4A265;
+  }
 
-    --card: 220 13% 14%;
-    --card-foreground: 210 20% 90%;
-
-    --popover: 220 13% 14%;
-    --popover-foreground: 210 20% 90%;
-
-    --primary: 215 16% 57%;
-    --primary-foreground: 220 13% 10%;
-
-    --secondary: 220 13% 18%;
-    --secondary-foreground: 210 20% 80%;
-
-    --muted: 220 13% 18%;
-    --muted-foreground: 215 12% 55%;
-
-    --accent: 215 20% 65%;
-    --accent-foreground: 220 13% 10%;
-
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 13% 20%;
-    --input: 220 13% 20%;
-    --ring: 215 16% 57%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 220 13% 8%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 215 16% 57%;
-    --sidebar-primary-foreground: 220 13% 10%;
-    --sidebar-accent: 220 13% 16%;
-    --sidebar-accent-foreground: 210 20% 90%;
-    --sidebar-border: 220 13% 20%;
-    --sidebar-ring: 215 16% 57%;
+  [data-theme="light"] {
+    --bg-primary: #FBFAF7;
+    --bg-surface: #F3F1EB;
+    --line: #E2DFD6;
+    --accent: #1E4D40;
+    --accent-soft: #E7EEE9;
+    --text-primary: #17211F;
+    --text-muted: #4B5754;
+    --gold: #85652B;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    border-color: var(--line);
+    box-sizing: border-box;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* Micro-interactions (Taste-skill Rule 5) */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--bg-primary);
   }
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Restrained Taste-skill interactive utilities */
+.card-hover {
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes bounce-slow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
+.card-hover:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
 }
 
-.animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+.btn-press {
+  transition: transform 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
 }
 
-.animate-bounce-slow {
-  animation: bounce-slow 2s ease-in-out infinite;
+.btn-press:hover {
+  transform: translateY(-1px);
+}
+
+.btn-press:active {
+  transform: scale(0.98);
 }
