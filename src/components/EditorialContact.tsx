@@ -138,12 +138,19 @@ const EditorialContact: React.FC = () => {
                     <p className="text-[13px] text-[var(--text-muted)]">
                       Thank you for reaching out. I typically respond within 24 hours.
                     </p>
+                    <button
+                      type="button"
+                      onClick={() => setSubmitted(false)}
+                      className="text-xs text-[var(--accent)] underline mt-3 inline-block hover:opacity-80 transition-opacity"
+                    >
+                      Send another message
+                    </button>
                   </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {error && (
-                    <div className="p-3 rounded-md bg-red-500/10 border border-red-500/30 text-red-400 text-[13px] flex items-center gap-2">
+                    <div className="p-3 rounded-md bg-red-500/10 border border-red-500/30 text-red-600 dark:text-red-400 text-[13px] flex items-center gap-2">
                       <AlertCircle size={16} />
                       <span>{error}</span>
                     </div>

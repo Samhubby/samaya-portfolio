@@ -17,7 +17,7 @@ const EditorialNavbar: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[var(--bg-primary)]/90 border-b border-[var(--line)] transition-colors duration-200">
-      <div className="max-w-[1160px] mx-auto px-6 h-18 flex items-center justify-between">
+      <div className="max-w-[1160px] mx-auto px-6 h-[72px] flex items-center justify-between">
         {/* Brand Logo */}
         <a
           href="#"

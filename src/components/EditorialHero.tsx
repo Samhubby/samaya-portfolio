@@ -25,7 +25,9 @@ class BankingCaseDispatcher
 }`;
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(codeSnippet);
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(codeSnippet).catch(() => {});
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -103,21 +105,21 @@ class BankingCaseDispatcher
                 </button>
               </div>
 
-              {/* Code Snippet */}
-              <div className="font-mono text-[12px] sm:text-[12.5px] leading-relaxed text-[var(--text-primary)] bg-[var(--bg-primary)] p-4 rounded-md border border-[var(--line)] overflow-x-auto">
-                <div className="text-[var(--text-muted)] opacity-60 mb-2">// Enterprise BPM Event Dispatcher</div>
+              {/* Code Snippet - Permanent dark IDE container for optimal syntax contrast across themes */}
+              <div className="font-mono text-[12px] sm:text-[12.5px] leading-relaxed text-[#FBFAF7] bg-[#101816] p-4 rounded-md border border-[#223631] overflow-x-auto selection:bg-[#85C0AB]/30">
+                <div className="text-[#85C0AB]/60 mb-2">// Enterprise BPM Event Dispatcher</div>
                 <div>
-                  <span className="text-[var(--accent)]">class</span>{" "}
+                  <span className="text-[#85C0AB]">class</span>{" "}
                   <span className="text-[#E5C07B] font-semibold">BankingCaseDispatcher</span>
                 </div>
                 <div>{"{"}</div>
                 <div className="pl-4">
-                  <span className="text-[var(--accent)]">public function</span>{" "}
+                  <span className="text-[#85C0AB]">public function</span>{" "}
                   <span className="text-[#61AFEF]">dispatch</span>(CaseSubmission $case):{" "}
-                  <span className="text-[var(--accent)]">void</span>
+                  <span className="text-[#85C0AB]">void</span>
                 </div>
                 <div className="pl-4">{"{"}</div>
-                <div className="pl-8 text-[var(--text-muted)]">
+                <div className="pl-8 text-[#A7C2B8]/70">
                   // Event integration via RabbitMQ
                 </div>
                 <div className="pl-8">
@@ -126,7 +128,7 @@ class BankingCaseDispatcher
                 <div className="pl-12">
                   queue: <span className="text-[#98C379]">'bpm.banking.sync'</span>,
                 </div>
-                <div className="pl-12">
+                <div className="pl-12 text-[#FBFAF7]">
                   payload: $case-&gt;toAuditEvent()
                 </div>
                 <div className="pl-8">

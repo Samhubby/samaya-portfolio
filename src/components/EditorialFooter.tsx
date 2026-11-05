@@ -16,7 +16,7 @@ const EditorialFooter: React.FC = () => {
           <span>&copy; {new Date().getFullYear()} All rights reserved.</span>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-6">
           <a
             href={profile.github}
             target="_blank"
