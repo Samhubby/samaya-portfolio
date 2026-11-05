@@ -23,7 +23,7 @@ const EditorialNavbar: React.FC = () => {
           href="#"
           className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-primary)] hover:opacity-90 transition-opacity"
         >
-          Samaya<span className="text-[var(--accent)]">.</span>
+          Samaya
         </a>
 
         {/* Desktop Nav Links */}

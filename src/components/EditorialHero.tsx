@@ -38,8 +38,8 @@ class BankingCaseDispatcher
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Left Column: Editorial Headline & Value Statement */}
           <div className="lg:col-span-7">
-            <div className="text-[12px] sm:text-[13px] font-bold uppercase tracking-wider text-[var(--accent)] mb-4">
-              Associate Backend Developer &bull; Kathmandu, Nepal
+            <div className="text-[12px] sm:text-[13px] font-mono uppercase tracking-wider text-[var(--accent)] mb-4">
+              Associate Backend Developer / Kathmandu, Nepal
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-[var(--text-primary)] leading-[1.1] mb-6">
@@ -88,8 +88,7 @@ class BankingCaseDispatcher
             <div className="rounded-lg border border-[var(--line)] bg-[var(--bg-surface)] p-6 shadow-sm card-hover relative overflow-hidden">
               {/* Top Meta Bar */}
               <div className="flex items-center justify-between pb-4 mb-4 border-b border-[var(--line)]">
-                <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] text-[11px] font-semibold tracking-wide">
-                  <span className="w-2 h-2 rounded-full bg-[var(--accent)]"></span>
+                <div className="px-3 py-1 rounded border border-[var(--line)] bg-[var(--bg-primary)] text-[var(--accent)] text-[11px] font-mono uppercase tracking-wider">
                   Available for Freelance &amp; Systems Roles
                 </div>
 
@@ -139,7 +138,7 @@ class BankingCaseDispatcher
 
               {/* Card Bottom Meta */}
               <div className="mt-4 pt-3 border-t border-[var(--line)] flex items-center justify-between text-[11.5px] text-[var(--text-muted)]">
-                <span className="font-medium">Amnil Technologies &bull; BSIT (2022–2026)</span>
+                <span className="font-medium">Amnil Technologies / BSIT (2022–2026)</span>
                 <span className="font-semibold text-[var(--gold)]">AWS Solutions Architect</span>
               </div>
             </div>

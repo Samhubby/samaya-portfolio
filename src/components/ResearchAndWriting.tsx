@@ -12,7 +12,7 @@ const ResearchAndWriting: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-[var(--line)]">
           <div>
             <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] font-semibold mb-2">
-              Publications &bull; 04
+              04 / Publications
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[var(--text-primary)]">
               Research &amp; Technical Writing
@@ -50,7 +50,7 @@ const ResearchAndWriting: React.FC = () => {
                 {pub.doi && (
                   <div className="pt-4 border-t border-[var(--line)] flex items-center justify-between">
                     <span className="text-[12px] font-mono text-[var(--text-muted)]">
-                      DOI Indexed &bull; Open Access
+                      DOI Indexed / Open Access
                     </span>
                     <a
                       href={pub.doi}

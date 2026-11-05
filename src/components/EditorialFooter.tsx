@@ -12,7 +12,7 @@ const EditorialFooter: React.FC = () => {
       <div className="max-w-[1160px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 text-[13px] text-[var(--text-muted)]">
         <div>
           <span className="font-serif font-bold text-[var(--text-primary)]">Samaya Mahate</span>
-          <span className="mx-2">&bull;</span>
+          <span className="mx-2 text-[var(--text-muted)]">/</span>
           <span>&copy; {new Date().getFullYear()} All rights reserved.</span>
         </div>
 

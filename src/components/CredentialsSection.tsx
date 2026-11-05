@@ -9,7 +9,7 @@ const CredentialsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-[var(--line)]">
           <div>
             <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] font-semibold mb-2">
-              Credentials &bull; 05
+              05 / Credentials
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[var(--text-primary)]">
               Education &amp; Certifications

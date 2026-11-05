@@ -12,7 +12,7 @@ const FeaturedSystems: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-[var(--line)]">
           <div>
             <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] font-semibold mb-2">
-              Case Studies &bull; 03
+              03 / Featured Systems
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[var(--text-primary)]">
               Systems &amp; Projects
@@ -62,9 +62,9 @@ const FeaturedSystems: React.FC = () => {
                   <div className="text-[var(--text-primary)] font-semibold flex items-center gap-1.5">
                     <Terminal size={14} className="text-[var(--accent)]" /> Architecture Highlights:
                   </div>
-                  <div>&bull; Redis cache for sub-millisecond streak validation</div>
-                  <div>&bull; MongoDB for challenge flag repositories &amp; attempts</div>
-                  <div>&bull; Express API with strict rate limiting &amp; anti-bruteforce</div>
+                  <div>— Redis cache for sub-millisecond streak validation</div>
+                  <div>— MongoDB for challenge flag repositories &amp; attempts</div>
+                  <div>— Express API with strict rate limiting &amp; anti-bruteforce</div>
                 </div>
               </div>
 
@@ -113,9 +113,9 @@ const FeaturedSystems: React.FC = () => {
                 <div className="text-[var(--text-primary)] font-semibold flex items-center gap-1.5">
                   <Terminal size={14} className="text-[var(--accent)]" /> Architecture Highlights:
                 </div>
-                <div>&bull; Asynchronous event bus via RabbitMQ</div>
-                <div>&bull; Customer case submission portal with document uploads</div>
-                <div>&bull; Jenkins CI/CD deployment pipelines on Dockerized hosts</div>
+                <div>— Asynchronous event bus via RabbitMQ</div>
+                <div>— Customer case submission portal with document uploads</div>
+                <div>— Jenkins CI/CD deployment pipelines on Dockerized hosts</div>
               </div>
             </div>
 

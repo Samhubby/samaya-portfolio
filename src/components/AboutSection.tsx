@@ -40,7 +40,7 @@ const AboutSection: React.FC = () => {
           {/* Left Column: Narrative */}
           <div className="lg:col-span-5">
             <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] font-semibold mb-3">
-              Background &bull; 01
+              01 / Background
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[var(--text-primary)] leading-tight mb-6">
               Engineering Philosophy &amp; Background

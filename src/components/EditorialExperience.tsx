@@ -12,7 +12,7 @@ const EditorialExperience: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-4 border-b border-[var(--line)]">
           <div>
             <div className="text-[12px] font-mono uppercase tracking-widest text-[var(--accent)] font-semibold mb-2">
-              Career &bull; 02
+              02 / Experience
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl font-medium tracking-tight text-[var(--text-primary)]">
               Work &amp; Experience
@@ -62,7 +62,7 @@ const EditorialExperience: React.FC = () => {
                   <ul className="space-y-3 text-[14px] text-[var(--text-muted)] leading-relaxed">
                     {job.responsibilities.map((resp, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mt-2 shrink-0"></span>
+                        <span className="text-[var(--accent)] font-mono text-sm leading-none mt-1 shrink-0">—</span>
                         <span>{resp}</span>
                       </li>
                     ))}
